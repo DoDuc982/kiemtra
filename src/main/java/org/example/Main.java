@@ -54,7 +54,7 @@ public class Main {
                     sleep(1500);
                 }
                 case 8 -> {
-                    System.out.println("Ma trận tổng là: ");
+                    System.out.println("Ma trận tổng các hàng là: ");
                     System.out.println((squareMatrix.getSummaryOfRow()));
                     sleep(1500);
                 }

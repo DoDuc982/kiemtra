@@ -17,25 +17,17 @@ public class SquareMatrix {
                 this.arr1.add(sc.nextInt());
             }
         }
-        System.out.println("Ma trận 1 đã đủ, chuyển sang nhập ma trận 2: ");
-        for (int i = 0; i < this.n; i++) {
-            for (int j = 0; j < this.n; j++) {
-                this.arr2.add(sc.nextInt());
-            }
-        }
     }
 
     public ArrayList<Integer> getSummaryOfRow() {
         ArrayList<Integer> arr = new ArrayList<>();
-        int sum = 0;
         int count = 0;
         for (int i = 0; i < this.n * this.n; i++) {
-            if (count < n){
-                sum += this.arr1.get(i);
+            if(count!=this.n){
                 count++;
-            } else{
-                arr.add(sum);
-                sum = 0;
+                System.out.print(this.arr1.get(i));
+            } else {
+                System.out.println();
                 count = 0;
             }
         }
