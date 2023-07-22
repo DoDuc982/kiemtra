@@ -8,7 +8,7 @@ import static java.lang.Thread.sleep;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
         IntegerProcess integerProcess = new IntegerProcess();
-        ParagraphProcess paragraphProcess = new ParagraphProcess();
+        FloatProcess floatProcess = new FloatProcess();
         SquareMatrix squareMatrix = new SquareMatrix();
         Scanner sc = new Scanner(System.in);
         int choice = 1;
@@ -16,14 +16,15 @@ public class Main {
             choice = menu(sc);
             switch (choice) {
                 case 1 -> {
-                    paragraphProcess.paragraphInput();
-                    System.out.println("Đoạn văn bạn đã nhập là: ");
-                    System.out.println(paragraphProcess.paragraph);
+                    floatProcess.floatInput();
+                    System.out.println("Số bạn đã nhập là: ");
+                    System.out.println(floatProcess.n + " " + floatProcess.m);
+                    System.out.println("Số elipson là: ");
+                    System.out.println(floatProcess.e);
                     sleep(1500);
                 }
                 case 2 -> {
-                    System.out.println("Độ dài của xâu là: ");
-                    System.out.println(paragraphProcess.paragraphLength());
+                    System.out.println("");
                     sleep(1500);
                 }
                 case 3 -> {
@@ -45,11 +46,6 @@ public class Main {
                     }
                     sleep(1500);
                 }
-                case 6 -> {
-                    System.out.println("Số từ có trong xâu là: ");
-                    System.out.println(paragraphProcess.numberOfWord());
-                    sleep(1500);
-                }
                 case 7 -> {
                     squareMatrix.matrixInput();
                     System.out.println("Ma trận 1 và 2 đã nhập là: ");
@@ -59,7 +55,7 @@ public class Main {
                 }
                 case 8 -> {
                     System.out.println("Ma trận tổng là: ");
-                    System.out.println((squareMatrix.getSummaryOfTwoArr()));
+                    System.out.println((squareMatrix.getSummaryOfRow()));
                     sleep(1500);
                 }
                 default -> choice = 0;

@@ -25,10 +25,19 @@ public class SquareMatrix {
         }
     }
 
-    public ArrayList<Integer> getSummaryOfTwoArr() {
+    public ArrayList<Integer> getSummaryOfRow() {
         ArrayList<Integer> arr = new ArrayList<>();
+        int sum = 0;
+        int count = 0;
         for (int i = 0; i < this.n * this.n; i++) {
-            arr.add(arr1.get(i) + arr2.get(i));
+            if (count < n){
+                sum += this.arr1.get(i);
+                count++;
+            } else{
+                arr.add(sum);
+                sum = 0;
+                count = 0;
+            }
         }
         return arr;
     }
