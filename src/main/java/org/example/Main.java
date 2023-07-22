@@ -7,7 +7,7 @@ import static java.lang.Thread.sleep;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        FloatProcess floatProcess = new FloatProcess();
+        IntegerProcess integerProcess = new IntegerProcess();
         ParagraphProcess paragraphProcess = new ParagraphProcess();
         SquareMatrix squareMatrix = new SquareMatrix();
         Scanner sc = new Scanner(System.in);
@@ -16,30 +16,33 @@ public class Main {
             choice = menu(sc);
             switch (choice) {
                 case 1 -> {
-                    floatProcess.arrayInput();
-                    System.out.println("Dãy bạn đã nhập là: ");
-                    System.out.println(floatProcess.arr);
-                    sleep(1500);
-                }
-                case 2 -> {
-                    System.out.println("Tổng của dãy là: ");
-                    System.out.println(floatProcess.summaryOfArray());
-                    sleep(1500);
-                }
-                case 3 -> {
-                    System.out.println("Dãy sắp xếp là: ");
-                    System.out.println(floatProcess.sortArray());
-                    sleep(1500);
-                }
-                case 4 -> {
                     paragraphProcess.paragraphInput();
                     System.out.println("Đoạn văn bạn đã nhập là: ");
                     System.out.println(paragraphProcess.paragraph);
                     sleep(1500);
                 }
-                case 5 -> {
+                case 2 -> {
                     System.out.println("Độ dài của xâu là: ");
                     System.out.println(paragraphProcess.paragraphLength());
+                    sleep(1500);
+                }
+                case 3 -> {
+                    integerProcess.integerInput();
+                    System.out.println("Số bạn đã nhập là: ");
+                    System.out.println(integerProcess.n);
+                    sleep(1500);
+                }
+                case 4 -> {
+                    System.out.println("Tổng các chữ số của số là: ");
+                    System.out.println(integerProcess.summaryOfNumber());
+                    sleep(1500);
+                }
+                case 5 -> {
+                    if (integerProcess.isPalindromeNumber()){
+                        System.out.println("Số này là số thuận nghịch");
+                    } else {
+                        System.out.println("Số này không là số thuận nghịch");
+                    }
                     sleep(1500);
                 }
                 case 6 -> {
